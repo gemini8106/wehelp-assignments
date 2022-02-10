@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>  
+  <meta charset= "utf-8" />
+  <title>會員頁</title>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename= 'page.css') }}" />
+</head>
+<body>
+  <div class= "container" >
+    <div class= "information">歡迎光臨，這是會員頁</div>
+    <!--將傳入的name資料在{{name}}顯示出來-->
+    <div class= "message">{{name}}，歡迎登入系統<br>
+      <!--超連結為連結到signout網址執行指令-->
+      <a class= "act" href= "/signout/">登出系統</a>
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,129 @@
+body{
+  margin:0;
+  font-size: 20px;
+}
+.frame{
+  display: flex;/*讓下一層次水平排列*/
+  margin:5px;
+}
+.left{
+  width:50%;
+}
+.right{
+  display: flex;/*讓下一層次水平排列*/
+  justify-content: flex-end;/*讓下一層次項目排列靠右，flex-start就是靠左*/
+  width:50%;
+}
+.item{
+  margin-right: 5px;/*讓item右邊都有5px的空間，不黏在一起*/
+}
+.ham{
+  width:20px;
+  height: 20px;
+}
+.welcome{
+  display:flex;
+  justify-content: center;/*水平置中*/
+  align-items: center;/*此項為垂直置中，前面三項都打為將下一層次項目完美置中*/
+  height:300px;
+  background-color: bisque;;
+}
+.text{
+  font-size: 2rem;
+  font-weight: bold;        /*文字粗體*/
+  text-align: center;       /*文字置中*/
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;                    /*使下一項目排序若超過容器寬度則自動換行*/
+  justify-content: space-evenly;      /*除了margin外，將剩餘空間平均分配*/
+  
+}
+.pic{
+  margin:10px 0px 10px 0px;           /*pic容器上下方留10px的空間，讓pic不黏在一起*/
+  background-color: cornflowerblue;
+  width: 280px;                       /*pic容器固定寬度*/
+  display: none;                      /*pic容器初始顯示為none*/
+
+}
+.scenery{
+  float: left;
+  width: 280px;                     /*將圖片寬度固定*/
+  height: 210.3px;                  /*將圖片高度固定*/
+  object-fit: cover;                /*隨框架縮放並維持圖片比例*/
+  
+  
+}
+.caption{
+  text-align: center;
+  ;
+}
+#middle{                  /*使用flexbox將容器middle做設定，裡面的button將會被完美置中，使用上和上方的welcome容器相同*/
+  display:flex;
+  justify-content: center;/*水平置中*/
+  align-items: center;/*此項為垂直置中，前面三項都打為將下一層次項目完美置中*/;
+  height: 70px;       /*設定適當高度*/
+}
+.container .pic:nth-child(1) {        /*將前8張圖片以nth-child(n)選擇器的方法選擇並預先顯示*/
+  display: block;
+}
+.container .pic:nth-child(2) {
+  display: block;
+}
+.container .pic:nth-child(3) {
+  display: block;
+}
+.container .pic:nth-child(4) {
+  display: block;
+}
+.container .pic:nth-child(5) {
+  display: block;
+}
+.container .pic:nth-child(6) {
+  display: block;
+}
+.container .pic:nth-child(7) {
+  display: block;
+}
+.container .pic:nth-child(8) {
+  display: block;
+}
+@media(min-width:1200.1px){        /*畫面大於1200時的畫面設定*/
+  .ham{
+      display: none;
+  }
+  .container{
+      width:1200px;              /*固定容器寬度*/  
+      margin:auto;               /*margin自動*/
+  }
+}
+@media (max-width:1200px){        /*畫面大於600小於1200時的畫面設定*/
+  .ham{
+      display: none;
+  }
+  .container{
+      width:90%;                  /*固定容器最大90%*/ 
+      margin:auto;
+  }
+  .pic{
+      width:45%;                  /*pic容器各佔45％寬度，剛好放兩張圖*/ 
+  }
+  .scenery{
+      width:100%;                 /*圖片比例100%*/
+  }
+}
+@media (max-width:600px){         /*畫面小於600時的畫面設定*/
+  .item{
+      display: none;
+  }
+  .ham{
+      display: block;
+  }
+  .pic{
+      width:90%;                  /*pic容器維持90%寬度*/ 
+  }
+  .scenery{
+      width:100%;                 /*圖片比例100%*/
+  }
+}

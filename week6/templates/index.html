@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>  
+  <meta charset="utf-8" />
+  <title>首頁</title>
+  <!--要使用css一定要在flask使用static資料夾，因為css為靜態資料，必須從static資料夾抓取-->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}" />
+</head>
+<body>
+  <div class= "container">
+    
+    <div class= "information">歡迎光臨，請註冊登入系統</div>
+    
+      <form class= "form" action= "/signup/" method= "POST">
+        註冊帳號<br>
+        
+        <!--在form內加入input框，可以輸入數值，name＝"資料"，python就是從這抓取資料-->
+        姓名 <input class= "write" type= "text" name= "name" /><br>
+        帳號 <input class= "write" type= "text" name= "username" /><br>
+        密碼 <input class= "write" type= "text" name= "password" /><br>
+        <button id= "btn">註冊</button>
+      </form>
+      <hr>
+      <form class= "form" action= "/signin/" method= "POST">
+        登入系統<br>
+        
+        <!--在form內加入input框，可以輸入數值，name＝"資料"，python就是從這抓取資料-->
+        帳號 <input class= "write" type= "text" name= "username" /><br>
+        密碼 <input class= "write" type= "text" name= "password" /><br>
+        <button id= "btn">登入</button>
+      </form>
+
+      
+  </div>
+</body>
+</html>

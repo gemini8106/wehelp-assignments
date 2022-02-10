@@ -1,0 +1,25 @@
+body{                                         
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+.container{
+  align-content: center;
+  width:500px;
+  border:solid 1px rgb(189, 230, 179);
+}
+.information{
+  display: flex;
+  height:70px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(189, 230, 179);
+}
+.form{
+  text-align: center;
+  margin:10px;
+  
+}
+.write{
+  margin:7px;
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>  
+  <meta charset= "utf-8" />
+  <title>錯誤頁</title>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename= 'page.css') }}" />
+</head>
+<body>
+  <div class= "container" >
+    <div class= "information">失敗頁面</div>
+    <!--從python抓到登入錯誤訊息的message並顯示在{{data}}-->
+    <div class= "message">{{data}}<br>
+    <!--超連結為連結到backhome網址執行指令-->
+      <a class= "act" href= "/backhome/">返回首頁</a>
+    <div>
+  </div>
+  
+</body>
+</html>
