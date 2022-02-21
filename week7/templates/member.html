@@ -14,10 +14,10 @@
       <a class= "act" href= "/signout/">登出系統</a><hr><br>
     
       <div>查詢會員姓名</div>
-      
+      <form action="javascript:void(0);">
         <input id= "inputUsername" type= "text" placeholder="please enter username">
         <button id= "search">查詢</button>
-      
+      </form>
       <div id= "answer"></div><hr><br>
 
 
@@ -32,3 +32,9 @@
   <script src= "{{ url_for("static", filename= "week7.js") }}"  type= "text/javascript"></script>
 </body>
 </html>
+
+<!--
+1.在line17中，如果想要加上<form>，必須中間加上action="javascript:void(0);"，因為action在default會自動跳轉
+2.如果不想寫上述功能，只要不加上form即可，如line26，兩者會有同樣結果
+3.要串接javascript功能，要將js檔放入靜態檔案資料夾static中，並像line32這樣呼叫出來
+-->
