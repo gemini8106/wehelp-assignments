@@ -2,15 +2,7 @@
 from flask import Blueprint
 app2= Blueprint("app2",__name__)
 from flask import request, jsonify, redirect, session
-from mysql.connector import pooling
-connection_pool= pooling.MySQLConnectionPool(pool_name= "mydb_pool",
-                                             pool_size= 5,
-                                             pool_reset_session= True,
-                                             host= "localhost",
-                                             user= "root",
-                                             password= "qwer1234",
-                                             database= "website"
-                                             )
+from views.database import connection_pool
 
 
 #處理路徑(會員搜尋api)

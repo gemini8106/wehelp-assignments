@@ -6,8 +6,8 @@ from flask import render_template  #載入render_template函式，記得建立te
 from flask import url_for   #載入url_for函式
 from flask import session   #載入session物件
 from flask import Blueprint
-from api.api import app2
-from valid.valid import app3
+from views.api import app2
+from views.valid import app3
 
 
 
